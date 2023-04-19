@@ -1,0 +1,44 @@
+* {
+    font-family: 'Inter'
+}
+
+body {
+    background-color: rgb(217, 217, 217);
+}
+/* parte logo y titulo */
+.navbar{
+    width: 100%;
+    background-color: black;
+    padding-top: 0%;
+    color: #FFFFFF;
+    overflow: auto;
+}
+
+.titulo {
+    /* MyPage */
+    position: fixed;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+
+}
+
+#logo img {
+    /* image 1 */
+    width: 4rem;
+    height: 4rem;
+    /* float: left;  */
+    display:inline-block;
+    border-radius: 0.938rem;
+    
+
+}
+
+.right {
+    text-align: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
