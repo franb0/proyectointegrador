@@ -1,21 +1,48 @@
 * {
     font-family: 'Inter';
-    background-color: rgb(217, 217, 217);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: rgb(217, 217, 217);
+}
+img {
+    max-width: 100%;
+}
+
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+/* ESTE NO FUNCIONA */
 .navbar {
-
+    background-color: black;
+}
+.left {
+    place-content: left;
+}
+.right {
+    padding-left: 75rem;
+}
+.cart {
+    max-width: 20%;
+    max-height: min-content ;
+}
+img .logo {
+    max-height: 50%;
+    max-width: 100px;
+    display: flex;
+    
 }
 /* margin para afuera padding para adentro */
 /* en el margen va al sentido del reloj top-right-bottom-left */
+.slide {
+   width: ;
+}
 .catalogo {
     display: inline-block;
 }
@@ -27,7 +54,4 @@ ul {
     display: inline-block;
     width: 200px;
     background-color: white;
-}
-.imgantena {
-    height: 0%;
 }
