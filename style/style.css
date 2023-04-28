@@ -1,9 +1,11 @@
-
+* {
+  box-sizing: border-box;
+  font-family:'Raleway', sans-serif;
+}
 
 body {
     margin: 0;
-    background-color: rgb(217, 217, 217);
-    font-family:'Raleway', sans-serif;
+    background-color: rgb(217, 217, 217);   
 }
 
 a{
@@ -19,6 +21,8 @@ header{
     font-family:'Raleway', sans-serif;
     padding: 5px;
     align-items: center;
+    min-width: 100%;
+    position: fixed;
 }
 
 .Logo{
@@ -40,8 +44,7 @@ nav a:hover{
     color:#838383;
 }
 .carrito {
-    height: 25px;
-    width: auto;
+    max-height: 35px;
     padding-top: 1rem;
     padding-right: 1rem;
 }
@@ -53,14 +56,29 @@ nav a:hover{
 } */
 
 .slide {
-    
+  max-height: 500px;
+}
+
+.text-container {
+  color: #fff;
+  background-color: rgba(0,0,0,.5);
+  min-height: 250px;
+  max-width: 500px;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  position: absolute;
+}
+
+.overlay {
+  z-index: 9;
 }
 
 .catalogo {
     display: flex;
 }
 .products {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10%;
     padding: .5rem;
     margin: .5rem 3rem .5rem 3rem;
     text-align: center;
@@ -70,6 +88,7 @@ nav a:hover{
 }
 
 .esp {
+  padding-top: 3rem;
     max-width: 100%;
 }
 .antena {
