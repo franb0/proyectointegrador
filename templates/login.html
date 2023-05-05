@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
@@ -14,50 +14,42 @@
 
     <header>
         <a href="index.html" class="Logo">
-            <img src="./media/image.png" alt="logo tienda" class="logoImg">
-            <h2 class="MyPage"><a href="/templates/login.html">MyPage</a></h2>
+            <img src="/media/image.png" alt="logo tienda" class="logoImg">
+            <h2 class="MyPage">MyPage</h2>
         </a>
 
         <nav>
-            <a href="./templates/login.html" class="Nav-Link">Login</a>
-            <img href="#" src="./media/cart.png" alt="Carrito" class="carrito">
+            <a href="/index.html" class="Nav-Link">HOME</a>
         </nav>
     </header>
 
-    <div class="presentation">
-        <div class="diapositivas">
-            <img src="./media/slide0.jpg" alt="usb" class="slide">
+    <div class="login-box">
+      <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+          <img src="img_avatar2.png" alt="Avatar" class="avatar">
         </div>
-        
-        <div class="text-container overlay">
-            <h2>Hotplug Attack</h2>
-            <h4>En poco tiempo, obtén acceso al sistema</h4>
+      
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
         </div>
+      
+        <div class="container" style="background-color:#3b3b3b">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw"><a href="#">Forgot password?</a></span>
+        </div>
+      </form>
+      
     </div>
-
-    <ul class="catalogo">
-.
-        <div class="products">
-            <img src="./media/attiny.png" alt="esp" class="esp">
-            <h3>Hotplug</h3>
-        </div>
-
-        <div class="products">
-            <img id="imgantena"  src="./media/antena.png" alt="antena" class="antena">
-            <h3>Wireless</h3>
-        </div>
-
-        <div class="products">
-            <img src="./media/rasp.png" alt="micropc" class="rasp">
-            <h3>Micro PC</h3>
-        </div>
-
-        <div class="products">
-            <img src="./media/cursos.png" alt="courses" class="courses">
-            <h3>Courses</h3>
-        </div>
-
-    </ul>
+    
 
     <footer>
         <footer class="footer">
