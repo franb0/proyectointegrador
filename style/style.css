@@ -23,6 +23,7 @@ header{
     align-items: center;
     min-width: 100%;
     position: fixed;
+    z-index: 3;
 }
 
 .Logo{
@@ -54,9 +55,12 @@ nav a:hover{
 /* .presentation {
     
 } */
-
+.presentation {
+  z-index: 1;
+  max-height: 50%;
+}
 .slide {
-  max-height: 500px;
+  max-height: auto;
   max-width: 100%;
 }
 
@@ -67,16 +71,19 @@ nav a:hover{
   max-width: 500px;
   padding-top: 1rem;
   padding-left: 1rem;
-  position: absolute;
+  padding-right: 0.5rem;
+  /* position: relative;top: auto; bottom: 275px; left: 700px; */
+  position: absolute;top: auto; bottom: 420px; left: 800px;
+  align-items: right;
+  z-index: 2;
 }
 
-.overlay {
+/* .overlay {
   z-index: 9;
-}
+  position: absolute;
+} */
 
-.catalogo {
-    display: flex;
-}
+
 .products {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 10%;
@@ -86,6 +93,15 @@ nav a:hover{
     display: inline-block;
     width: 200px;
     background-color: white;
+}
+
+
+.catalogo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
 }
 
 .esp {
