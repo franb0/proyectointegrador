@@ -73,7 +73,10 @@ nav a:hover{
   padding-left: 1rem;
   padding-right: 0.5rem;
   /* position: relative;top: auto; bottom: 275px; left: 700px; */
-  position: absolute;top: auto; bottom: 420px; left: 800px;
+  position: absolute;
+  top: 90px;
+  bottom: 420px;
+  left: 800px;
   align-items: right;
   z-index: 2;
 }
