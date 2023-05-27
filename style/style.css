@@ -4,142 +4,89 @@
 }
 
 body {
-    margin: 0;
-    background-color: rgb(217, 217, 217);   
+  display: grid;
+  margin: 0;
+  background-color: rgb(217, 217, 217);   
 }
 
+
+header {
+  display: inline-grid;
+  background-color: #000000;
+  max-height:100px;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: 100px;
+}
+
+nav {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  place-self: center;
+}
+
+.logo {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  margin: 0;
+  justify-self: center;
+  align-self: start;
+}
+
+a.hackio {
+  font-size:2vw;
+}
+
+/*Arreglar posicion de el titilo HACKIO, hay que alinear a el centro de el row de el header.*/
+
+
+/* ESTILO LINKS */
 a{
-    text-decoration: none;
-    color: #ffffff;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    height: 90px;
-    background-color: #000000;
-    font-family:'Raleway', sans-serif;
-    padding: 5px;
-    align-items: center;
-    min-width: 100%;
-    position: fixed;
-    z-index: 3;
-}
-
-.Logo{
-    display: flex;
-    align-items: center;
-}
-
-.logoImg{
-    height: 90px;
-    margin-right:10px;
-}
-
-nav a{
-    padding-right: 20px;
-    align-items: center;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 nav a:hover{
     color:#838383;
 }
-.carrito {
-    max-height: 35px;
-    padding-top: 1rem;
-    padding-right: 1rem;
+/* FIN ESTILO LINKS */
+
+/* CSS IMAGENES */
+
+.logoImg{
+  height: 90px;
+  margin-right:10px;
 }
-/* ESTE NO FUNCIONA */
-/* margin para afuera padding para adentro */
-/* en el margen va al sentido del reloj top-right-bottom-left */
-/* .presentation {
-    
-} */
-.presentation {
-  z-index: 1;
-  max-height: 50%;
+
+img.carrito {
+  max-height: 35px;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  grid-column-start: 4;
+  grid-column-end: 5;
 }
+
 .slide {
   max-height: auto;
   max-width: 100%;
 }
 
-.text-container {
-  color: #fff;
-  background-color: rgba(0,0,0,.5);
-  min-height: 250px;
-  max-width: 500px;
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 0.5rem;
-  /* position: relative;top: auto; bottom: 275px; left: 700px; */
-  position: absolute;
-  top: 90px;
-  bottom: 420px;
-  left: 800px;
-  align-items: right;
-  z-index: 2;
-}
-
-/* .overlay {
-  z-index: 9;
-  position: absolute;
-} */
-
-
-.products {
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 10%;
-    padding: .5rem;
-    margin: .5rem 3rem .5rem 3rem;
-    text-align: center;
-    display: inline-block;
-    width: 200px;
-    background-color: white;
-}
-
-
-.catalogo {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 30px;
-}
-
 .esp {
   padding-top: 3rem;
-    max-width: 100%;
+  max-width: 100%;
 }
 .antena {
-    max-width: 100%;
+  max-width: 100%;
 }
 .rasp {
-    max-width: 100%;
+  max-width: 100%;
 }
 .courses {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* FIN CSS IMAGENES */
 
 
 
