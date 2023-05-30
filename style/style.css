@@ -10,32 +10,66 @@ body {
 }
 
 header {
-  display: inline-grid;
-  background-color: #000000;
-  max-height:100px;
-  grid-template-columns: 1fr 1fr auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Adjusted grid-template-columns */
   grid-template-rows: 100px;
+  background-color: #000000;
+  max-height: 100px;
 }
 
 nav {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  place-self: center;
+  align-self: center; /* Align the nav to the center vertically */
+  justify-self: end; /* Align the nav to the center horizontally */
 }
 
 .logo {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  margin: 0;
-  justify-self: center;
-  align-self: start;
+  justify-self: start; /* Align the logo to the left */
+  display: grid;
+  grid-template-columns: auto auto; /* Adjusted grid-template-columns */
+  align-items: center; /* Vertically center the logo and title */
+  gap: 10px; /* Add some gap between the logo and title */
 }
 
 a.hackio {
-  font-size:2vw;
+  font-size: 2vw;
+  margin: 0; /* Remove the margin to align the title with the logo */
 }
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  a.hackio {
+    font-size: 0px; /* Adjust the font size for mobile devices */
+  }
+
+  header {
+    display: grid; /* Use grid layout for mobile */
+    grid-template-columns: 1fr 1fr; /* Change to a single column layout for mobile */
+    grid-template-rows: auto; /* Adjust grid-template-rows for mobile */
+    justify-items: center; /* Center the content horizontally within the grid */
+  }
+
+  nav {
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    align-self: center; /* Align the nav to the center vertically */
+    justify-self: center; /* Align the nav to the center horizontally */
+  }
+
+  img.carrito {
+    padding-left: 1rem;
+  }
+
+
+  .logo {
+    grid-row: 1; /* Place the logo in the first row of the grid */
+    justify-self: center; /* Align the logo to the center for mobile */
+  }
+}
+
+
 
 /*Arreglar posicion de el titilo HACKIO, hay que alinear a el centro de el row de el header.*/
 
@@ -62,22 +96,55 @@ img.carrito {
   max-height: 35px;
   padding-top: 1rem;
   padding-right: 1rem;
+  padding-left: 1rem;
   grid-column-start: 4;
   grid-column-end: 5;
 }
 
 
-.slide {
-  max-height: auto;
-  max-width: 100%;
+.presentation {
+  position: relative;
 }
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 30px;
+}
+
+.slide {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .presentation {
+    background-image: url('./media/slide0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .text-container {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+
+
+
 
 .catalogo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  background-color: white;
-  border-radius: 10px;
+  background-color: rgb(217, 217, 217);
   padding: 20px;
 }
 
